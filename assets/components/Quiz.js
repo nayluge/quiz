@@ -3,26 +3,48 @@ import PropTypes from 'prop-types';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Question from '../components/Question';
 import QuestionCount from '../components/QuestionCount';
-import AnswerOption from '../components/AnswerOption';
+import MultiText from './questionType/MultiText';
+import InputText from './questionType/InputText';
 
 function Quiz(props) {
 
   function chooseRender(myObj, renderer) {
     console.log(renderer);
-    return renderAnswerOptions(myObj);
+
+    switch (renderer) {
+        case 'MultiText':
+            return renderMultiText(myObj);
+        case 'InputText':
+            return renderInputText(myObj);
+    }
+
+
   }
 
-  function renderAnswerOptions(key) {
-    return (
-      <AnswerOption
-        key={key.content}
-        answerContent={key.content}
-        answerType={key.type}
-        answer={props.answer}
-        questionId={props.questionId}
-        onAnswerSelected={props.onAnswerSelected}
-      />
-    );
+  function renderMultiText(key) {
+      return (
+          <MultiText
+              key={key.content}
+              answerContent={key.content}
+              answerType={key.type}
+              answer={props.answer}
+              questionId={props.questionId}
+              onAnswerSelected={props.onAnswerSelected}
+          />
+      );
+  }
+
+  function renderInputText(key) {
+      return (
+          <InputText
+              key={key.content}
+              answerContent={key.content}
+              answerType={key.type}
+              answer={props.answer}
+              questionId={props.questionId}
+              onAnswerSelected={props.onAnswerSelected}
+          />
+      );
   }
 
   return (

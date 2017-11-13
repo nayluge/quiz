@@ -15,25 +15,17 @@ var quizQuestions = [
               content: "Uncharted"
           }
       ],
-      renderer: "text"
+      renderer: "MultiText"
   },
   {
-      question: "Which console would you prefer to play with friends?",
+      question: "What is your email ?",
       answers: [
           {
-              type: "Microsoft",
-              content: "X-Box"
-          },
-          {
-              type: "Nintendo",
-              content: "Nintendo 64"
-          },
-          {
-              type: "Sony",
-              content: "Playstation 1"
+              type: "input",
+              content: "email"
           }
       ],
-      renderer: "text"
+      renderer: "InputText"
   },
   {
       question: "Which of these racing franchises would you prefer to play a game from?",
@@ -51,7 +43,7 @@ var quizQuestions = [
               content: "Gran Turismo"
           }
       ],
-      renderer: "text"
+      renderer: "MultiText"
   },
   {
       question: "Which of these games do you think is best?",
@@ -69,7 +61,7 @@ var quizQuestions = [
               content: "Final Fantasy VII"
           }
       ],
-      renderer: "text"
+      renderer: "MultiText"
   },
   {
       question: "What console would you prefer to own?",
@@ -87,7 +79,7 @@ var quizQuestions = [
               content: "Playstation 4"
           }
       ],
-      renderer: "text"
+      renderer: "MultiText"
   }
 ];
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function AnswerOption(props) {
+function MultiText(props) {
 
   return (
     <li className="answerOption">
@@ -23,11 +23,11 @@ function AnswerOption(props) {
 
 }
 
-AnswerOption.propTypes = {
+MultiText.propTypes = {
   answerType: PropTypes.string.isRequired,
   answerContent: PropTypes.string.isRequired,
   answer: PropTypes.string.isRequired,
   onAnswerSelected: PropTypes.func.isRequired
 };
 
-export default AnswerOption;
+export default MultiText;
